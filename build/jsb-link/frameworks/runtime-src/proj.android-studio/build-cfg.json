@@ -1,0 +1,31 @@
+{
+    "ndk_module_path" :[
+        "/Users/panda/StudyWork/Cocos/fireball/cocos2d-x",
+        "/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/cocos",
+        "/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/external",
+        "/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/external/android/include",
+        "/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/external/android/spidermonkey"
+    ],
+    "copy_resources": [
+        {
+            "from": "../../../src",
+            "to": "src"
+        },
+        {
+            "from": "../../../res",
+            "to": "res"
+        },
+        {
+            "from": "../../../main.js",
+            "to": ""
+        },
+        {
+            "from": "/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/cocos/scripting/js-bindings/script",
+            "to": "script"
+        },
+        {
+            "from": "../../../project.json",
+            "to": ""
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+  "engine_version": "cocos2d-x-3.13-lite",
+  "has_native": true,
+  "project_type": "js",
+  "projectName": "ReflectionSample",
+  "packageName": "org.cocos2d.ReflectionSample"
+}

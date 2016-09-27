@@ -1,0 +1,4 @@
+include ':libcocos2dx'
+project(':libcocos2dx').projectDir = new File('/Users/panda/StudyWork/Cocos/fireball/cocos2d-x/cocos/platform/android/libcocos2dx')
+include ':ReflectionSample'
+project(':ReflectionSample').projectDir = new File(settingsDir, 'app')
