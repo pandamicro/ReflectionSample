@@ -5,14 +5,20 @@ cc.Class({
     },
     
     onLoad: function () {
-        jsb.reflection.callStaticMethod('AudioRecorder', 'initRecorder');
+        if (cc.sys.OS === cc.sys.OS_IOS) {
+            jsb.reflection.callStaticMethod('AudioRecorder', 'initRecorder');
+        }
     },
 
     play: function () {
-        jsb.reflection.callStaticMethod('AudioRecorder', 'playLatest');
+        if (cc.sys.OS === cc.sys.OS_IOS) {
+            jsb.reflection.callStaticMethod('AudioRecorder', 'playLatest');
+        }
     },
 
     record: function () {
-        jsb.reflection.callStaticMethod('AudioRecorder', 'record');
+        if (cc.sys.OS === cc.sys.OS_IOS) {
+            jsb.reflection.callStaticMethod('AudioRecorder', 'record');
+        }
     },
 });

@@ -9,17 +9,50 @@ cc.Class({
     properties: {},
 
     onLoad: function onLoad() {
-        jsb.reflection.callStaticMethod('AudioRecorder', 'initRecorder');
+        if (cc.sys.OS === cc.sys.OS_IOS) {
+            jsb.reflection.callStaticMethod('AudioRecorder', 'initRecorder');
+        }
     },
 
     play: function play() {
-        jsb.reflection.callStaticMethod('AudioRecorder', 'playLatest');
+        if (cc.sys.OS === cc.sys.OS_IOS) {
+            jsb.reflection.callStaticMethod('AudioRecorder', 'playLatest');
+        }
     },
 
     record: function record() {
-        jsb.reflection.callStaticMethod('AudioRecorder', 'record');
+        if (cc.sys.OS === cc.sys.OS_IOS) {
+            jsb.reflection.callStaticMethod('AudioRecorder', 'record');
+        }
     }
 });
 
 cc._RFpop();
-},{}]},{},["AudioRecorder"]);
+},{}],"ScreenShot":[function(require,module,exports){
+"use strict";
+cc._RFpush(module, '5b3bdbPS+dEbJm+EmEA1au1', 'ScreenShot');
+// Script/ScreenShot.js
+
+cc.Class({
+    "extends": cc.Component,
+
+    properties: {
+        // foo: {
+        //    default: null,      // The default value will be used only when the component attaching
+        //                           to a node for the first time
+        //    url: cc.Texture2D,  // optional, default is typeof default
+        //    serializable: true, // optional, default is true
+        //    visible: true,      // optional, default is true
+        //    displayName: 'Foo', // optional
+        //    readonly: false,    // optional, default is false
+        // },
+        // ...
+    },
+
+    capture: function capture() {
+        jsb.reflection.callStaticMethod("org/cocos2dx/javascript/ScreenCapturer", "capture", "()V");
+    }
+});
+
+cc._RFpop();
+},{}]},{},["AudioRecorder","ScreenShot"]);
