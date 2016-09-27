@@ -20,12 +20,12 @@ _CCSettings = {
             ]
         },
         "internal": {
-            "e851e89b-faa2-4484-bea6-5c01dd9f06e2": [
-                "image/default_btn_normal.png",
-                "cc.Texture2D"
-            ],
             "b43ff3c2-02bb-4874-81f7-f2dea6970f18": [
                 "image/default_btn_pressed.png",
+                "cc.Texture2D"
+            ],
+            "e851e89b-faa2-4484-bea6-5c01dd9f06e2": [
+                "image/default_btn_normal.png",
                 "cc.Texture2D"
             ],
             "71561142-4c83-4933-afca-cb7a17f67053": [
@@ -34,10 +34,10 @@ _CCSettings = {
             ]
         }
     },
-    "launchScene": "db://assets/Scene/helloworld.fire",
+    "launchScene": "db://assets/Scene/AudioRecorder.fire",
     "scenes": [
         {
-            "url": "db://assets/Scene/helloworld.fire",
+            "url": "db://assets/Scene/AudioRecorder.fire",
             "uuid": "2d2f792f-a40c-49bb-a189-ed176a246e49"
         }
     ],

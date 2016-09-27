@@ -5,9 +5,9 @@
     "anysdk"
   ],
   "orientation": {
-    "landscapeLeft": false,
-    "landscapeRight": false,
-    "portrait": true,
+    "landscapeLeft": true,
+    "landscapeRight": true,
+    "portrait": false,
     "upsideDown": false
   },
   "packageName": "org.cocos2d.ReflectionSample",
