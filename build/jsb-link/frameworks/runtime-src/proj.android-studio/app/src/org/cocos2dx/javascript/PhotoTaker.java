@@ -21,13 +21,15 @@ public class PhotoTaker {
     private static Bitmap bmScreen;
     public static int count = 0;
 
-    public static void capture () {
+    public static String getDir () {
         final String dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/picFolder/";
         File newdir = new File(dir);
         newdir.mkdirs();
-        count++;
-        String file = dir+count+".jpg";
-        File newfile = new File(file);
+        return dir;
+    }
+
+    public static void capture (String FilePath) {
+        File newfile = new File(FilePath);
         try {
             newfile.createNewFile();
         }
