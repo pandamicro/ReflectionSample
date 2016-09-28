@@ -6,7 +6,9 @@ cc._RFpush(module, '280c3rsZJJKnZ9RqbALVwtK', 'AudioRecorder');
 cc.Class({
     'extends': cc.Component,
 
-    properties: {},
+    properties: {
+        recordLabel: cc.Label
+    },
 
     onLoad: function onLoad() {
         if (cc.sys.OS === cc.sys.OS_IOS) {
@@ -23,15 +25,20 @@ cc.Class({
     record: function record() {
         if (cc.sys.OS === cc.sys.OS_IOS) {
             jsb.reflection.callStaticMethod('AudioRecorder', 'record');
+            if (jsb.reflection.callStaticMethod('AudioRecorder', 'isRecording')) {
+                this.recordLabel.string = 'Stop';
+            } else {
+                this.recordLabel.string = 'Record';
+            }
         }
     }
 });
 
 cc._RFpop();
-},{}],"ScreenShot":[function(require,module,exports){
+},{}],"PhotoTaker":[function(require,module,exports){
 "use strict";
-cc._RFpush(module, '5b3bdbPS+dEbJm+EmEA1au1', 'ScreenShot');
-// Script/ScreenShot.js
+cc._RFpush(module, '5b3bdbPS+dEbJm+EmEA1au1', 'PhotoTaker');
+// Script/PhotoTaker.js
 
 cc.Class({
     "extends": cc.Component,
@@ -50,9 +57,11 @@ cc.Class({
     },
 
     capture: function capture() {
-        jsb.reflection.callStaticMethod("org/cocos2dx/javascript/ScreenCapturer", "capture", "()V");
+        if (cc.sys.OS === cc.sys.OS_ANDROID) {
+            jsb.reflection.callStaticMethod("org/cocos2dx/javascript/PhotoTaker", "capture", "()V");
+        }
     }
 });
 
 cc._RFpop();
-},{}]},{},["AudioRecorder","ScreenShot"]);
+},{}]},{},["AudioRecorder","PhotoTaker"]);

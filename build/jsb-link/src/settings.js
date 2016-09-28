@@ -14,12 +14,12 @@ _CCSettings = {
                 "Texture/home_bg_big.jpg",
                 "cc.Texture2D"
             ],
-            "6aa0aa6a-ebee-4155-a088-a687a6aadec4": [
-                "Texture/HelloWorld.png",
-                "cc.Texture2D"
-            ],
             "a8027877-d8d6-4645-97a0-52d4a0123dba": [
                 "Texture/singleColor.png",
+                "cc.Texture2D"
+            ],
+            "6aa0aa6a-ebee-4155-a088-a687a6aadec4": [
+                "Texture/HelloWorld.png",
                 "cc.Texture2D"
             ]
         },
@@ -38,15 +38,15 @@ _CCSettings = {
             ]
         }
     },
-    "launchScene": "db://assets/Scene/ScreenShot.fire",
+    "launchScene": "db://assets/Scene/AudioRecorder.fire",
     "scenes": [
-        {
-            "url": "db://assets/Scene/ScreenShot.fire",
-            "uuid": "11e2b048-2149-47ad-b174-88d377deddbb"
-        },
         {
             "url": "db://assets/Scene/AudioRecorder.fire",
             "uuid": "2d2f792f-a40c-49bb-a189-ed176a246e49"
+        },
+        {
+            "url": "db://assets/Scene/Photo.fire",
+            "uuid": "11e2b048-2149-47ad-b174-88d377deddbb"
         }
     ],
     "orientation": "",

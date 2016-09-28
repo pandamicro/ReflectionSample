@@ -73,6 +73,10 @@ static AudioRecorder *instance;
     }
 }
 
++ (BOOL) isRecording {
+    return recorder.recording;
+}
+
 + (void)playLatest
 {
     if (recorder.recording){

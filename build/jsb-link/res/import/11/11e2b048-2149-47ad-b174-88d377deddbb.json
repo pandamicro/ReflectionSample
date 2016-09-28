@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.SceneAsset",
-    "_name": "ScreenShot",
+    "_name": "Photo",
     "scene": {
       "__id__": 1
     },

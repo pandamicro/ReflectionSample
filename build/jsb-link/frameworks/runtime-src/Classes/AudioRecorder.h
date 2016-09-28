@@ -11,8 +11,9 @@
 
 @interface AudioRecorder : NSObject <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
-+ (void)initRecorder;
-+ (void)record;
-+ (void)playLatest;
++ (void) initRecorder;
++ (BOOL) isRecording;
++ (void) record;
++ (void) playLatest;
 
 @end
